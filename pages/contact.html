@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <title>Contact</title>
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <div class="logo">
+          <img src="../images/logo.png" alt="logo" />
+          <div class="Heading">
+          <h1>ARYA ADVISORY</h1>
+          <h4>CHARTERED ACCOUNTANTS</h4>
+        </div></div>
+      
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="services.html">Services</a>
+          <!-- <a href="industries.html">Industries</a>
+          <a href="resources.html">Resources</a> -->
+          <a href="contact.html">Contact Us</a>
+        </nav>
+        <div id="book_button">
+          <button onclick="window.location.href = 'contact.html'">
+          Book a Consultation
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="contact_hero">
+        <div class="contact_head">
+          <h2>
+       Let’s Start a Conversation
+          </h2>
+        <div>
+         
+Whether you need help with tax, an SMSF, your business structure or your accounting software, we would be glad to hear from you.<br>
+ Contact Arya Advisory today to arrange a conversation about how we can support you.
+
+        </div>
+      </section>
+
+      <section class="contact_main">
+        <section class="send_form">
+          <div class="contact_title">
+            <h3>Send Us a Message</h3>
+          </div>
+
+          <h4>
+            Fill in the form below and we'll get back to you as soon as
+            possible.
+          </h4>
+
+          <form
+            class="contact_message_form"
+            action="http://localhost:8080/contact"
+            method="post"
+          >
+            <div class="input_box">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" name="name" placeholder="Your Name" />
+            </div>
+
+            <div class="input_box">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" name="email" placeholder="Email Address" />
+            </div>
+            <div class="input_box">
+              <i class="fa-solid fa-phone"></i>
+              <input type="number" name="phone" placeholder="Phone Number" />
+            </div>
+
+            <div class="input_box">
+              <i class="fa-regular fa-clipboard"></i>
+
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject(Optional)"
+              />
+            </div>
+
+            <textarea
+              id="textarea1"
+              name="message"
+              placeholder="How can we help you?"
+              rows="5"
+              cols="40"
+            ></textarea>
+            <button class="message">Send Message</button>
+          </form>
+        </section>
+        <section class="contact_information">
+          <h3>Contact Information</h3>
+          <h4>Please contact us if you have any queries</h4>
+
+          <div>
+            <i class="fa-solid fa-phone"></i>
+            <br />
+            <div class="number"><p>0432911111</p></div>
+          </div>
+
+          <div>
+            <i class="fa-regular fa-envelope"></i><br />
+            <div class="number"><p>Info@Aryaadvisory.com.au</p></div>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-location-dot"></i><br />
+            <div class="number"></div>
+            <p>Coomera Qld 4209</p>
+          </div>
+          <!-- <div>
+            <i class="fa-regular fa-clock"></i><br />
+            <div class="number"><p>Mon-Fri, 8:30 AM- 5:00PM</p></div>
+          </div> -->
+        </section>
+      </section>
+    </main>
+
+   <!-- <footer class="contact_footer">
+      <div class="footer_img">
+        <img src="/images/footer1.jpg" alt="footer1" />
+        <img src="/images/footer2.png" alt="footer2" />
+        <img src="/images/footer3.png" alt="footer3" />
+        <img src="/images/footer4.png" alt="footer4" />
+        <img src="/images/footer5.png" alt="footer5" />
+        <img src="/images/footer6.jpg" alt="footer6" />
+      </div>
+    </footer> -->
+    <footer class="contact_footer">
+  <div class="footer_img">
+    <img src="/images/footer1.jpg" alt="footer1" />
+    <img src="/images/footer2.png" alt="footer2" />
+    <img src="/images/footer3.png" alt="footer3" />
+    <img src="/images/footer4.png" alt="footer4" />
+    <img src="/images/footer5.png" alt="footer5" />
+    <img src="/images/footer6.jpg" alt="footer6" />
+  </div>
+
+  <div class="footer_main">
+    <div class="footer_brand">
+      <strong>Arya Advisory</strong>
+      <span>Chartered Accountants</span>
+    </div>
+    <div class="footer_contact">
+      <span>Coomera, QLD</span>
+ <a href="tel:+61000000000">+61432911111</a>      <a href="mailto:info@aryaadvisory.com.au">info@aryaadvisory.com.au</a>
+    </div>
+  </div>
+
+  <div class="footer_bottom">
+    <span>&copy; 2026 Arya Advisory. General advice only; not personal advice.</span>
+    <span><a href="#">Privacy Policy</a><a href="#">Terms</a></span>
+  </div>
+</footer>
+    <div class="success_dialog" id="successDialog">
+      <div class="success_box">
+        <i class="fa-solid fa-circle-check"></i>
+        <h2>Message Sent Successfully!</h2>
+        <p>
+          Thank you for contacting Arya Advisory<br />
+          We'll get back to you as soon as possible.
+        </p>
+        <button id="closeDialog">OK</button>
+      </div>
+    </div>
+    <script>
+      const form = document.querySelector(".contact_message_form");
+      const successDialog = document.getElementById("successDialog");
+      const closeDialog = document.getElementById("closeDialog");
+
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+        const formData = new FormData(form);
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+          });
+
+          console.log("Response status:", response.status);
+          console.log("Response OK:", response.ok);
+
+          successDialog.style.display = "flex";
+          form.reset();
+        } catch (error) {
+          console.log("Error:", error);
+        }
+      });
+      closeDialog.addEventListener("click", function () {
+        successDialog.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
