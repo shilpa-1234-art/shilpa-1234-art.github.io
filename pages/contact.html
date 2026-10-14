@@ -17,10 +17,11 @@
         <div class="logo">
           <img src="../images/logo.png" alt="logo" />
           <div class="Heading">
-          <h1>ARYA ADVISORY</h1>
-          <h4>CHARTERED ACCOUNTANTS</h4>
-        </div></div>
-      
+            <h1>ARYA ADVISORY</h1>
+            <h4>CHARTERED ACCOUNTANTS</h4>
+          </div>
+        </div>
+
         <nav>
           <a href="../index.html">Home</a>
           <a href="aboutus.html">About Us</a>
@@ -31,7 +32,7 @@
         </nav>
         <div id="book_button">
           <button onclick="window.location.href = 'contact.html'">
-          Book a Consultation
+            Book a Consultation
           </button>
         </div>
       </div>
@@ -39,14 +40,13 @@
     <main>
       <section class="contact_hero">
         <div class="contact_head">
-          <h2>
-       Let’s Start a Conversation
-          </h2>
-        <div>
-         
-Whether you need help with tax, an SMSF, your business structure or your accounting software, we would be glad to hear from you.<br>
- Contact Arya Advisory today to arrange a conversation about how we can support you.
-
+          <h2>Let’s Start a Conversation</h2>
+          <div>
+            Whether you need help with tax, an SMSF, your business structure or
+            your accounting software, we would be glad to hear from you.<br />
+            Contact Arya Advisory today to arrange a conversation about how we
+            can support you.
+          </div>
         </div>
       </section>
 
@@ -61,7 +61,7 @@ Whether you need help with tax, an SMSF, your business structure or your account
             possible.
           </h4>
 
-          <form
+          <!-- <form
             class="contact_message_form"
             action="http://localhost:8080/contact"
             method="post"
@@ -98,6 +98,63 @@ Whether you need help with tax, an SMSF, your business structure or your account
               cols="40"
             ></textarea>
             <button class="message">Send Message</button>
+          </form> -->
+          <form
+            class="contact_message_form"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="378dfe9b-5d08-4bf4-8f19-7731ddb61ff4"
+            />
+            <input
+              type="checkbox"
+              name="botcheck"
+              style="display: none"
+              tabindex="-1"
+              autocomplete="off"
+            />
+
+            <div class="input_box">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+
+            <div class="input_box">
+              <i class="fa-solid fa-envelope"></i>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+
+            <div class="input_box">
+              <i class="fa-solid fa-phone"></i>
+              <input type="tel" name="phone" placeholder="Phone Number" />
+            </div>
+
+            <div class="input_box">
+              <i class="fa-regular fa-clipboard"></i>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject (Optional)"
+              />
+            </div>
+
+            <textarea
+              id="textarea1"
+              name="message"
+              placeholder="How can we help you?"
+              rows="5"
+              cols="40"
+              required
+            ></textarea>
+            <button class="message">Send Message</button>
           </form>
         </section>
         <section class="contact_information">
@@ -128,7 +185,7 @@ Whether you need help with tax, an SMSF, your business structure or your account
       </section>
     </main>
 
-   <!-- <footer class="contact_footer">
+    <footer class="contact_footer">
       <div class="footer_img">
         <img src="/images/footer1.jpg" alt="footer1" />
         <img src="/images/footer2.png" alt="footer2" />
@@ -137,33 +194,27 @@ Whether you need help with tax, an SMSF, your business structure or your account
         <img src="/images/footer5.png" alt="footer5" />
         <img src="/images/footer6.jpg" alt="footer6" />
       </div>
-    </footer> -->
-    <footer class="contact_footer">
-  <div class="footer_img">
-    <img src="/images/footer1.jpg" alt="footer1" />
-    <img src="/images/footer2.png" alt="footer2" />
-    <img src="/images/footer3.png" alt="footer3" />
-    <img src="/images/footer4.png" alt="footer4" />
-    <img src="/images/footer5.png" alt="footer5" />
-    <img src="/images/footer6.jpg" alt="footer6" />
-  </div>
 
-  <div class="footer_main">
-    <div class="footer_brand">
-      <strong>Arya Advisory</strong>
-      <span>Chartered Accountants</span>
-    </div>
-    <div class="footer_contact">
-      <span>Coomera, QLD</span>
- <a href="tel:+61000000000">+61432911111</a>      <a href="mailto:info@aryaadvisory.com.au">info@aryaadvisory.com.au</a>
-    </div>
-  </div>
+      <div class="footer_main">
+        <div class="footer_brand">
+          <strong>Arya Advisory</strong>
+          <span>Chartered Accountants</span>
+        </div>
+        <div class="footer_contact">
+          <span>Coomera, QLD</span>
+          <a href="tel:+61432911111">+61432911111</a>
+          <a href="mailto:info@aryaadvisory.com.au">info@aryaadvisory.com.au</a>
+        </div>
+      </div>
 
-  <div class="footer_bottom">
-    <span>&copy; 2026 Arya Advisory. General advice only; not personal advice.</span>
-    <span><a href="#">Privacy Policy</a><a href="#">Terms</a></span>
-  </div>
-</footer>
+      <div class="footer_bottom">
+        <span
+          >&copy; 2026 Arya Advisory. General advice only; not personal
+          advice.</span
+        >
+        <span><a href="#">Privacy Policy</a><a href="#">Terms</a></span>
+      </div>
+    </footer>
     <div class="success_dialog" id="successDialog">
       <div class="success_box">
         <i class="fa-solid fa-circle-check"></i>
@@ -175,6 +226,7 @@ Whether you need help with tax, an SMSF, your business structure or your account
         <button id="closeDialog">OK</button>
       </div>
     </div>
+
     <script>
       const form = document.querySelector(".contact_message_form");
       const successDialog = document.getElementById("successDialog");
@@ -182,23 +234,36 @@ Whether you need help with tax, an SMSF, your business structure or your account
 
       form.addEventListener("submit", async function (event) {
         event.preventDefault();
-        const formData = new FormData(form);
+        const submitBtn = form.querySelector("button.message");
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
 
         try {
           const response = await fetch(form.action, {
             method: "POST",
-            body: formData,
+            body: new FormData(form),
+            headers: { Accept: "application/json" },
           });
+          const result = await response.json();
 
-          console.log("Response status:", response.status);
-          console.log("Response OK:", response.ok);
-
-          successDialog.style.display = "flex";
-          form.reset();
+          if (response.ok && result.success) {
+            successDialog.style.display = "flex";
+            form.reset();
+          } else {
+            alert(
+              "Sorry, something went wrong. Please email us at info@aryaadvisory.com.au",
+            );
+          }
         } catch (error) {
-          console.log("Error:", error);
+          alert(
+            "Sorry, something went wrong. Please email us at info@aryaadvisory.com.au",
+          );
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Send Message";
         }
       });
+
       closeDialog.addEventListener("click", function () {
         successDialog.style.display = "none";
       });
