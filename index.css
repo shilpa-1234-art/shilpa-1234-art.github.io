@@ -101,54 +101,23 @@ a {
 .top nav a:hover {
   color: var(--gold);
 }
+
 #book_button button {
-  width: 100%;
-  max-width: 220px;
-  min-height: 44px;
-  padding: 10px 20px;
+  width: 165px;
+  min-height: 42px;
+  padding: 8px 12px;
   background-color: var(--gold);
   color: var(--navy-dark);
   border: none;
   border-radius: 5px;
-  font-size: clamp(14px, 2vw, 16px);
+  font-size: 14px;
   font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
 #book_button button:hover {
   background-color: var(--white);
 }
 
-/* Layout of the whole bottom section */
-.service_help {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 40px 6%;
-  box-sizing: border-box;
-}
-
-@media (max-width: 768px) {
-  .service_help {
-    flex-direction: column;
-    text-align: center;
-    padding: 32px 5%;
-  }
-
-  #book_button {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  #book_button button {
-    max-width: 320px;
-    min-height: 48px; /* comfortable tap target */
-  }
-}
-s
 /* ==================================================
    3. HOME PAGE
    index.html
