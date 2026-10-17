@@ -101,7 +101,9 @@ a {
 .top nav a:hover {
   color: var(--gold);
 }
-
+.top_mark {
+  color: #d9a441;
+}
 #book_button button {
   width: 165px;
   min-height: 42px;
