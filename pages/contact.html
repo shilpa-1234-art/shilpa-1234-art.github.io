@@ -9,7 +9,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
 
-    <title>Contact</title>
+    <title>Contact Us | Arya Advisory – Coomera, Gold Coast QLD</title>
+    <meta
+      name="description"
+      content="Contact Arya Advisory in Coomera, Gold Coast for tax, SMSF, accounting and business advice. Call 0432 911 111 or send a message to book a consultation."
+    />
   </head>
   <body>
     <header>
@@ -30,11 +34,11 @@
           <a href="resources.html">Resources</a> -->
           <a href="contact.html">Contact Us</a>
         </nav>
-        <div id="book_button">
+        <!-- <div id="book_button">
           <button onclick="window.location.href = 'contact.html'">
             Book a Consultation
           </button>
-        </div>
+        </div> -->
       </div>
     </header>
     <main>
@@ -60,45 +64,6 @@
             Fill in the form below and we'll get back to you as soon as
             possible.
           </h4>
-
-          <!-- <form
-            class="contact_message_form"
-            action="http://localhost:8080/contact"
-            method="post"
-          >
-            <div class="input_box">
-              <i class="fa-solid fa-user"></i>
-              <input type="text" name="name" placeholder="Your Name" />
-            </div>
-
-            <div class="input_box">
-              <i class="fa-solid fa-envelope"></i>
-              <input type="email" name="email" placeholder="Email Address" />
-            </div>
-            <div class="input_box">
-              <i class="fa-solid fa-phone"></i>
-              <input type="number" name="phone" placeholder="Phone Number" />
-            </div>
-
-            <div class="input_box">
-              <i class="fa-regular fa-clipboard"></i>
-
-              <input
-                type="text"
-                name="subject"
-                placeholder="Subject(Optional)"
-              />
-            </div>
-
-            <textarea
-              id="textarea1"
-              name="message"
-              placeholder="How can we help you?"
-              rows="5"
-              cols="40"
-            ></textarea>
-            <button class="message">Send Message</button>
-          </form> -->
           <form
             class="contact_message_form"
             action="https://api.web3forms.com/submit"
@@ -119,7 +84,14 @@
 
             <div class="input_box">
               <i class="fa-solid fa-user"></i>
-              <input type="text" name="name" placeholder="Your Name" required />
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                max-length="60"
+                autocomplete="name"
+                required
+              />
             </div>
 
             <div class="input_box">
@@ -159,7 +131,7 @@
         </section>
         <section class="contact_information">
           <h3>Contact Information</h3>
-          <h4>Please contact us if you have any queries</h4>
+          <h4>Please contact us if you have any queries.</h4>
 
           <div>
             <i class="fa-solid fa-phone"></i>
@@ -169,18 +141,13 @@
 
           <div>
             <i class="fa-regular fa-envelope"></i><br />
-            <div class="number"><p>Info@Aryaadvisory.com.au</p></div>
+            <div class="number"><p>info@Aryaadvisory.com.au</p></div>
           </div>
 
           <div>
             <i class="fa-solid fa-location-dot"></i><br />
-            <div class="number"></div>
-            <p>Coomera Qld 4209</p>
+            <div class="number"><p>Coomera,Qld 4209</p></div>
           </div>
-          <!-- <div>
-            <i class="fa-regular fa-clock"></i><br />
-            <div class="number"><p>Mon-Fri, 8:30 AM- 5:00PM</p></div>
-          </div> -->
         </section>
       </section>
     </main>
@@ -201,7 +168,7 @@
           <span>Chartered Accountants</span>
         </div>
         <div class="footer_contact">
-          <span>Coomera, QLD</span>
+          <span>Coomera,QLD</span>
           <a href="tel:+61432911111">+61432911111</a>
           <a href="mailto:info@aryaadvisory.com.au">info@aryaadvisory.com.au</a>
         </div>
@@ -209,10 +176,10 @@
 
       <div class="footer_bottom">
         <span
-          >&copy; 2026 Arya Advisory. General advice only; not personal
-          advice.</span
+          >&copy; 2026 Arya Advisory.<br />
+          Liability limited by a scheme approved under Professional Standards
+          Legislation.</span
         >
-        <span><a href="#">Privacy Policy</a><a href="#">Terms</a></span>
       </div>
     </footer>
     <div class="success_dialog" id="successDialog">
@@ -220,7 +187,7 @@
         <i class="fa-solid fa-circle-check"></i>
         <h2>Message Sent Successfully!</h2>
         <p>
-          Thank you for contacting Arya Advisory<br />
+          Thank you for contacting Arya Advisory.<br />
           We'll get back to you as soon as possible.
         </p>
         <button id="closeDialog">OK</button>
