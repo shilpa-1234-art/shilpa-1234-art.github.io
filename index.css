@@ -589,7 +589,7 @@ a {
 .aboutinfo2 h4 {
   margin-bottom: 10px;
   color: #06213d;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Poppins";
   font-size: 52px;
   font-weight: 700;
   line-height: 1;
@@ -1280,7 +1280,7 @@ a {
 .contact_information > div {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .contact_information i {
@@ -1381,7 +1381,7 @@ a {
   width: 70px;
   height: 64px;
   object-fit: contain;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   box-shadow: 0 4px 10px rgba(217, 164, 65, 0.35);
 }
 
@@ -1436,10 +1436,11 @@ a {
   padding: 12px 24px 16px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   gap: 6px 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
-  font-size: 11px;
+  font-size: 14px;
   color: #8f9bb0;
 }
 
@@ -1525,10 +1526,17 @@ a {
     flex-direction: column;
     gap: 12px;
   }
+  .top .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
   .top .logo img {
     width: 65px;
     height: 65px;
+    margin: 0px;
   }
 
   .top .Heading {
@@ -1764,15 +1772,19 @@ a {
 .service_help {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  gap: 20px;
   border: 2px solid #d9a441;
   border-radius: 10px;
-  width: 1000px;
+  width: 90%;
+  max-width: 1000px;
   padding: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
-  align-self: center;
+  margin: 30px auto;
+  /* align-self: center;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
 }
 .service_help h3 {
   color: var(--navy);
@@ -1793,7 +1805,23 @@ a {
   flex-wrap: wrap;
   gap: 10px;
 }
+/* Service_ bottom_Mobile */
+@media (max-width: 650px) {
+  .service_help {
+    flex-direction: column; /* text upar, button neeche */
+    text-align: center;
+    padding: 20px 15px;
+  }
 
+  .service_help h3 {
+    font-size: 21px;
+  }
+
+  .service_help h4 {
+    font-size: 15px;
+    font-weight: normal;
+  }
+}
 /* ABOUT US TOP HEADER */
 
 .about_head {
